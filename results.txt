@@ -1,0 +1,1 @@
+8_lstm_no_teacher_forcing_config: 3.2717increased_layers_lstm_config: 1.3893128_increased_lstm_config: 1.3277128_lstm_config: 1.3443128_rnn_config: 1.546316_lstm_config: 1.366116_lstm_no_teacher_forcing_config: 3.164116_rnn_config: 1.516932_lstm_no_teacher_forcing_config: 3.3156

@@ -6,8 +6,6 @@ from torch.utils.data import Dataset, DataLoader
 import numpy as np
 from torch.utils.data import random_split
 import os
-
-
 from util import encode_text, create_sequences
 from shakespeare_dataset import ShakespeareDataset
 from shakespeare_lstm import LSTMModel
@@ -84,6 +82,10 @@ def main():
     
     # device = torch.device("mps")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    if torch.cuda.is_available():
+        print(f"Using GPU: {torch.cuda.get_device_name(0)}")
+        
     if config['model'] == 'LSTM':
         model = LSTMModel(vocab_size, config['embed_size'], config['hidden_size'], config['num_layers']).to(device)
     elif config['model'] == 'RNN':
